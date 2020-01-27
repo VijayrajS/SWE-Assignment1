@@ -47,14 +47,12 @@ public class Args {
   private void parseSchemaElement(final String element) throws ArgsException {
     final char elementId = element.charAt(0);
     validateSchemaElementId(elementId);
-
-    insertElementInMarshaler(elementId, element);
+    insertInMarshaler(element);
   }
   
-  private void insertElementInMarshaler(
-    final char elementId, 
-    final String element) throws ArgsException {
+  private void insertInMarshaler(final String element) throws ArgsException {
 
+    final char elementId = element.charAt(0);
     final String symbol = element.substring(1);
 
     /*
