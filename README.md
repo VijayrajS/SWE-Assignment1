@@ -2,6 +2,19 @@
 
 ##### Vijayraj Shanmugaraj [20171026]
 
+## Instructions:
+- Java 11 onwards recommended
+
+### For Running code
+      * install ant by running 'sudo apt-get install ant'
+      * run 'ant compile'
+      * run 'ant jar'
+      * run 'java -cp build/jar/args.jar com.cleancoder.args.ArgsMain'
+### For the tests
+        * Run the command given below from the root folder of this repo
+        * 'java -cp "lib/junit-4.13.jar:lib/hamcrest-core-1.3.jar:build/jar/args.jar" ./test/com/cleancoder/args/ArgsTest.java testCreateWithNoSchemaOrArguments'
+    
+
 ## Code Cleanup
 
 - Declared all variables in the entire scope of the class *Args()* so that these attributes can be used in any method of the class without having to pass the variables as arguments to the methods. reducing the number of arguments that are passed in the functions *parseSchema()* and *parseArgumentList()* from one to zero
