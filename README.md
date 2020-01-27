@@ -19,7 +19,6 @@
 - Followed the rule "Public functions should follow the list of variables. We like to put the private utilities called by a public function right after the public function itself. This follows the stepdown rule." while adding functions to code.
 - Declared all variables in the entire scope of the class *Args()* so that these attributes can be used in any method of the class without having to pass the variables as arguments to the methods. reducing the number of arguments that are passed in the functions *parseSchema()* and *parseArgumentList()* from one to zero
 - Functions like isNotEmpty, isNotLetter and so on added for easier readability
-- The constuctor only assigns the value of *schema* and *argsList*, initializes the Mapping of the schema symbols to the appropriate marsheler type and then calls *parse()* function. So, the constructor only initializes all values required. 
 - *parseArgumentStrings()* name changed to *parseArgsList()* for better understanding of what the function actually does.
 - changed the for loop in *parseArgsList()* to a while loop, since the running loop is based on a condition not being satisfied, and makes sense during reading the code
 - *parseSchemaElement()* divided into two different functions to strictly follow the rule that each function must do only one job. So, *parseSchemaElement()* only parses the schema element into the variable name and value. Validation and setting the appropriate type of marsheler to the appropriate key is done by *validateSchemaElementId()* and *insertElementInMarshaler()* respectively.
