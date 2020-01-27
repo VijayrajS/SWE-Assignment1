@@ -1,0 +1,6 @@
+
+Use try-except in your code, and optionally Optional class
+Optional class: Used to avoid null pointer
+
+Write the tests, and then clean the code. Because only then, we will get the errors and know what to clean up in the code.
+
