@@ -50,12 +50,10 @@ public class Args {
     insertInMarshaler(element);
   }
   
-  
   private void validateSchemaElementId(final char elementId) throws ArgsException {
     if (isNotLetter(elementId))
       throw new ArgsException(INVALID_ARGUMENT_NAME, elementId, null);
   }
-  
 
   private void insertInMarshaler(final String element) throws ArgsException {
 
