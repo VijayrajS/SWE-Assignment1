@@ -50,6 +50,13 @@ public class Args {
     insertInMarshaler(element);
   }
   
+  
+  private void validateSchemaElementId(final char elementId) throws ArgsException {
+    if (isNotLetter(elementId))
+      throw new ArgsException(INVALID_ARGUMENT_NAME, elementId, null);
+  }
+  
+
   private void insertInMarshaler(final String element) throws ArgsException {
 
     final char elementId = element.charAt(0);
@@ -83,11 +90,6 @@ public class Args {
 
   private boolean isEmpty(final String element) {
     return element.length() == 0;
-  }
-
-  private void validateSchemaElementId(final char elementId) throws ArgsException {
-    if (isNotLetter(elementId))
-      throw new ArgsException(INVALID_ARGUMENT_NAME, elementId, null);
   }
   
   private boolean isNotLetter(final char element) {
